@@ -17,4 +17,3 @@ class TencentItem(scrapy.Item):
     people_number = scrapy.Field()
     work_city = scrapy.Field()
     publish_date = scrapy.Field()
-
