@@ -23,12 +23,12 @@ class TencentSpider(scrapy.Spider):
             work_city = each.xpath('./td[4]/text()').extract()[0]
             publish_date = each.xpath('./td[5]/text()').extract()[0]
 
-            item['name'] = name.encode('utf-8')
-            item['detail_link'] = detail_link.encode('utf-8')
-            item['job_info'] = job_info.encode('utf-8')
-            item['people_number'] = people_number.encode('utf-8')
-            item['work_city'] = work_city.encode('utf-8')
-            item['publish_date'] = work_city.encode('utf-8')
+            item['name'] = name
+            item['detail_link'] = detail_link
+            item['job_info'] = job_info
+            item['people_number'] = people_number
+            item['work_city'] = work_city
+            item['publish_date'] = publish_date
 
             # 翻页
             curpage = re.search('(\d+)', response.url).group(1)
